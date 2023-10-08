@@ -68,7 +68,7 @@ filterBytag
 http://localhost:3000/api/anuncios?tags=motor
 
 filterByprice
-http://localhost:3000/api/anuncios?price=50 -> sin rango de precio
+http://localhost:3000/api/anuncios?price=50
 
 skip
 http://localhost:3000/api/anuncios?skip=2
