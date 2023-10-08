@@ -6,7 +6,41 @@ const Anuncio = require('../../models/Anuncio');
 router.get('/', async (req, res, next) => {
 
     try {
-        const anuncios = await Anuncio.find();
+      // http://localhost:3000/api/anuncios?name=Taladro
+      const filterByName = req.query.name;
+      // http://localhost:3000/api/anuncios?buySell=busqueda
+      // http://localhost:3000/api/anuncios?buySell=venta
+      const filterBybuySell = req.query.buySell;
+      // http://localhost:3000/api/anuncios?tags=motor
+      const filterBytag = req.query.tags;
+      //  http://localhost:3000/api/anuncios?price=50 -> sin rango de precio
+      const filterByprice = req.query.price;
+      // http://localhost:3000/api/anuncios?skip=2
+      const skip = req.query.skip;
+      // http://localhost:3000/api/anuncios?skip=0&limit=1
+      const limit = req.query.limit;
+      // http://localhost:3000/api/anuncios?fields=tags%20-_id
+      const fields = req.query.fields;
+
+      const filtro = {};
+
+      if (filterByName) {
+        filtro.name = filterByName;
+      }
+
+      if (filterBybuySell) {
+        filtro.buySell = filterBybuySell;
+      }
+
+      if (filterBytag) {
+        filtro.tags = filterBytag;
+      }
+
+      if (filterByprice) {
+        filtro.price = filterByprice;
+      }
+
+        const anuncios = await Anuncio.lista(filtro, skip, limit, fields);
 
         // throw new Error('fallo forzado');
 
@@ -45,7 +79,7 @@ router.put('/:id', async (req, res, next) => {
     }
 })
 
-// POST 7api/anuncios/ -> crea un agente con body
+// POST api/anuncios/ -> crea un agente con body
 
 router.post('/', async (req, res, next) => {
     try {
