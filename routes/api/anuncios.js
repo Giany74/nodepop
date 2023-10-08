@@ -45,4 +45,23 @@ router.put('/:id', async (req, res, next) => {
     }
 })
 
+// POST 7api/anuncios/ -> crea un agente con body
+
+router.post('/', async (req, res, next) => {
+    try {
+      const anuncioData = req.body;
+  
+      // creamos una instancia de agente en memoria
+      const anuncio = new Anuncio(anuncioData);
+  
+      // la persistimos en la BD
+      const anuncioGuardado = await anuncio.save();
+  
+      res.json({ result: anuncioGuardado });
+  
+    } catch (err) {
+      next(err);
+    }
+  });
+
 module.exports = router
