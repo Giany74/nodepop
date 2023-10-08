@@ -50,6 +50,13 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+
+  // API err JSON
+  if (req.originalUrl.startsWith('/api/')) {
+    res.json({ error: err.message});
+    return;
+  }
+
   res.render('error');
 });
 

@@ -1,0 +1,90 @@
+{
+  "anuncios": [
+    {
+      "name":"iPhone 3GS",
+      "buySell": "venta",
+      "price":50,
+      "foto":"iphone.png",
+      "tags":[
+        "lifestyle",
+        "mobile"
+      ]
+    },
+    {
+      "name":"Bicicleta",
+      "buySell": "busqueda",
+      "price":230.15,
+      "foto":"bici.jpg",
+      "tags":[
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "name":"Taladro",
+      "buySell": "busqueda",
+      "price":50,
+      "foto":"taladro.jpg",
+      "tags":[
+        "work",
+        "motor"
+      ]
+    },
+    {
+      "name":"Magic Mouse 2",
+      "buySell": "venta",
+      "price":35,
+      "foto":"magic_mouse.jpg",
+      "tags":[
+        "work",
+        "lifestyle"
+      ]
+    },
+    {
+      "name":"chewing gum Elon Musk",
+      "buySell": "busqueda",
+      "price":500,
+      "foto":"chewing_gum_Musk.png",
+      "tags":[
+        "lifestyle"
+      ]
+    },
+    {
+      "name":"Gafas de sol Armani",
+      "buySell": "venta",
+      "price":60,
+      "foto":"gafas_armani.jpg",
+      "tags":[
+        "lifestyle"
+      ]
+    },
+    {
+      "name":"Monopatin Xiaomi",
+      "buySell": "busqueda",
+      "price":90,
+      "foto":"monopatin_xiaomi.jpg",
+      "tags":[
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "name":"Enanito de gardin",
+      "buySell": "busqueda",
+      "price":15,
+      "foto":"enanito_de_gardin.jpg",
+      "tags":[
+        "lifestyle"
+      ]
+    },
+    {
+      "name":"Motorola vintage Matrix",
+      "buySell": "busqueda",
+      "price":90,
+      "foto":"Motorola_matrix.jpg",
+      "tags":[
+        "mobile"
+      ]
+    }
+  ]
+}
