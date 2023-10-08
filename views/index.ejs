@@ -7,5 +7,17 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+
+    <% if (data) { %>
+      <ul>
+        <% data.forEach(function(item) { %>
+          <li><%= item.name %></li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No se encontraron datos de la API.</p>
+    <% } %>
+
   </body>
 </html>
